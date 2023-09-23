@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<div>
+    <h1>Username: {{.U}}</h1> 
+    <h2>Complaint is: {{.Ticks}}</h2> 
+    <h3 >Ticket id is:</h3> 
+    
+</div>
+
+<form action="/Auditticket/adminarchive" method="POST">
+    <input name="username" type="text" value={{.U}} hidden>
+    <input name="ticketid" type="text" value={{.Tickid}} readonly>
+    <br>
+    <br>
+    <textarea name="ticket" rows="5" cols="40"></textarea> 
+    <h3 >time:{{.Ttime}}</h3> 
+    <input type="Submit" value="SendRespond"/>
+</form>
+</html>

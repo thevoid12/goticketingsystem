@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+    <form action="/Auditticket/welcome" method="POST">
+   <h1 >Welcome to Auditcue Ticketing system</h1>   
+   <div>
+    <h2>Enter your complaints so that admin will respond</h2>
+    <textarea name="ticket" rows="20" cols="80"></textarea> 
+   </div>
+   <div><input type="submit" value="Submit Your Ticket"></div>
+   
+    </form>
+    <a href="http://localhost:8080/Auditticket/raisedtickets">Click here to see your tickets</a>
+    <h3>Your query:{{.problem}}</h3>
+   <h3>response from the admin:{{.adminreply}}</h3> <!--receives the comment from admin if admin replies-->
+</body>
+</html>
